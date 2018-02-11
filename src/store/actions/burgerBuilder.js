@@ -1,5 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios-orders';
+import keys from '../../config/keys'
 
 
 export const addIngredient = (name) =>{
@@ -31,7 +32,7 @@ export const fetchIngredientsFailed = () =>{
 
 export const initIngredients = () =>{
   return dispatch => {
-      axios.get( 'https://burger-builder-eb72e.firebaseio.com/ingredients.json' )
+      axios.get( `${keys.baseUrlFirebase}ingredients.json `)
       .then( response => {
           dispatch(setIngredients(response.data))
       })
