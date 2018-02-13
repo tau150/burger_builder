@@ -6,7 +6,11 @@ import classes from './Auth.css';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import * as actions from '../../store/actions/index';
 import { Redirect } from 'react-router-dom';
+<<<<<<< HEAD
 
+=======
+import { updateObject, checkValidity } from '../../shared/utility';
+>>>>>>> branch_aux
 
 class Auth extends Component {
 
@@ -44,6 +48,7 @@ class Auth extends Component {
     isSignup: true
   }
 
+<<<<<<< HEAD
 
 inputChangedHandler = (event, controlName) => {
     const updatedControls = {
@@ -57,6 +62,18 @@ inputChangedHandler = (event, controlName) => {
     };
     this.setState({controls: updatedControls});
 };
+=======
+  inputChangedHandler = ( event, controlName ) => {
+    const updatedControls = updateObject( this.state.controls, {
+        [controlName]: updateObject( this.state.controls[controlName], {
+            value: event.target.value,
+            valid: checkValidity( event.target.value, this.state.controls[controlName].validation ),
+            touched: true
+        } )
+    } );
+    this.setState( { controls: updatedControls } );
+}
+>>>>>>> branch_aux
 
 
 submitHandler = (event) =>{
@@ -78,6 +95,7 @@ componentDidMount(){
     }
 }
 
+<<<<<<< HEAD
 checkValidity(value, rules) {
     let isValid = true;
     if (!rules) {
@@ -110,6 +128,8 @@ checkValidity(value, rules) {
 }
 
 
+=======
+>>>>>>> branch_aux
 
   render(){
 
