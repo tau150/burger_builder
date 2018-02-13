@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-<<<<<<< HEAD
-import * as actions from '../../store/actions/index';
-=======
->>>>>>> branch_aux
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import ContactData from './ContactData/ContactData';
 

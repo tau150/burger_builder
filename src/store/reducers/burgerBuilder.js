@@ -1,9 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-<<<<<<< HEAD
-import { updateObject } from '../utility';
-=======
 import { updateObject } from '../../shared/utility';
->>>>>>> branch_aux
 
 const initialState = {
     ingredients: null,
