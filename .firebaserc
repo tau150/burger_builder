@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "burger-builder-eb72e"
+    "default": "burger-builder-eb72e",
+    "burger": "burger-builder-eb72e"
   }
 }
